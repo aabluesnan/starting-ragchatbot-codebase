@@ -57,6 +57,28 @@ rm -rf chroma_db/
 rmdir /s /q chroma_db
 ```
 
+### Code Quality Tools
+```bash
+# Format code automatically (black + ruff)
+./format.sh
+
+# Run all quality checks (formatting, linting, type checking)
+./check.sh
+
+# Individual tools
+uv run black backend/ main.py              # Auto-format code
+uv run ruff check backend/ main.py         # Lint code
+uv run ruff check --fix backend/ main.py   # Auto-fix linting issues
+uv run mypy backend/ main.py               # Type check
+```
+
+**Quality Tools Configuration:**
+- **Black**: Line length 100, Python 3.13+ (configured in pyproject.toml)
+- **Ruff**: Fast linter with import sorting, replaces flake8/isort (pycodestyle, pyflakes, bugbear, etc.)
+- **MyPy**: Type checker with balanced strictness settings
+
+All quality tool configurations are in `pyproject.toml`. Run `./check.sh` before committing to ensure code quality standards are met.
+
 ## High-Level Architecture
 
 ### Two-Stage AI Interaction Flow
