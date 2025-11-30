@@ -2,6 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Development Workflow
+
+**CRITICAL**: For any non-trivial change to this codebase:
+
+1. First, explore the relevant files and produce a step-by-step plan.
+2. Show me the plan and wait for my approval.
+3. Only after I say "go ahead" should you start editing files.
+4. Keep the plan concise and numbered.
+
+This ensures all changes are reviewed before implementation.
+
 ## Project Overview
 
 A Retrieval-Augmented Generation (RAG) chatbot system for semantic search and Q&A over course materials. Uses ChromaDB for vector storage, Anthropic's Claude for AI generation, and provides a web interface.
